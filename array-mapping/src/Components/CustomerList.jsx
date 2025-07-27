@@ -1,10 +1,16 @@
 import { useState } from "react";
 import Customers from '../assets/customers.json';
 import CustomerDetails from "./CustomerDetails";
+import CustomerForm from "./CustomerForm";
 
 function CustomerList() {
     const[ customers,setCustomers]=useState(Customers);
     const [selected,setSelected]=useState(Customers[0]);
+    const addCustomer=(obj)=>{
+        setCustomers([...customers,obj]);
+        alert('customer added successfuly')
+
+    }
     return ( 
         <div>
             <h3 className="p-2 text-bg-success text-center">Customer List</h3>
@@ -29,7 +35,7 @@ function CustomerList() {
             </table>
             <div className="row">
                 <div className="col"><CustomerDetails selected={selected} /></div>
-                <div className="col"></div>
+                <div className="col"><CustomerForm addCustomer={addCustomer}/></div>
             </div>
         </div>
      );

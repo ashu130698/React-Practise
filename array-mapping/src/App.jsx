@@ -4,7 +4,7 @@ import SortingDemo from "./Components/SortingDemo";
 function App() {
   return (  
     <div className="container">
-      <SortingDemo />
+      <CustomerList />
 
     </div>
   );
