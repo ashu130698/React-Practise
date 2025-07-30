@@ -18,6 +18,7 @@ export default CompA;
 // //we have to first send A to B, B to C and then so on.
 // //Here, we also use contextapi which send data diretly comp A to C with the help of Provider(App.jsx), Consumer(CompC) and the Context(Data)
 // //It also create callback hell like situation like if we have to send multiple data we have to provide multiple provider and consumer like
+// To get to solve this problem we introduced hooks
 // example : import { createContext } from "react";
 // import CompA from "./PropDrillling/PropDrill/CompA";
 
