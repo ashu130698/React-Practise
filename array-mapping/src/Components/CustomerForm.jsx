@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CustomerForm(addCustomer) {
+function CustomerForm({addCustomer}) {
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
     const [username,setUsername]=useState('');
@@ -15,9 +15,9 @@ function CustomerForm(addCustomer) {
         <div>
             <h3 className="p-2 text-center text-bg-info">Customer Form</h3>
             <form onSubmit={handleSubmit}>
-                <input type="text" className="form-control mt-3" placeholder="John Doe" value={name} onClick={(e)=>setName(e.target.value)} />
-                <input type="email" className="form-control mt-3" placeholder="john.doe@gmail.com" value={email} onClick={(e)=>setEmail(e.target.value)}/>
-                <input type="text" className="form-control mt-3" placeholder="john123" value={username} onClick={(e)=>setUsername(e.target.value)}/>
+                <input type="text" className="form-control mt-3" placeholder="John Doe" value={name} onChange={(e)=>setName(e.target.value)} />
+                <input type="email" className="form-control mt-3" placeholder="john.doe@gmail.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <input type="text" className="form-control mt-3" placeholder="john123" value={username} onChange={(e)=>setUsername(e.target.value)}/>
                 <button type="submit" className="btn btn-primary w-100 mt-3">Add Customer</button>
             </form>
         </div>
