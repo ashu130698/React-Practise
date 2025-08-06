@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import { ThemeProvider } from './Context API/ThemeContext.jsx'
+import { ThemeProvider } from './HOOKS/Context API/ThemeContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>

@@ -4,8 +4,8 @@
 // // import UseState2 from "./HOOKS/UseState2";
 
 import { useContext } from "react";
-import ThemeComponent from "./Context API/ThemeComponent";
-import { ThemeContext } from "./Context API/ThemeContext";
+import ThemeComponent from "./HOOKS/Context API/ThemeComponent";
+import { ThemeContext } from "./HOOKS/Context API/ThemeContext";
 
 // function App() {
 //   const [index,setIndex]=useState(0);
