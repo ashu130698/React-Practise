@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 const UseForm1 = () => {
     const{register,handleSubmit,formState:{errors}}=useForm();
     const handleregistration=(data)=>console.log(data);
-    const handleErrors=(errors)=>{};
+    const handleErrors=( )=>{};
     const registeroptions={
         name:{required:'Name is required'},
         email:{required:'Email is required'},
