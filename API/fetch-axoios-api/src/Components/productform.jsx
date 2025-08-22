@@ -1,0 +1,43 @@
+import axios from "axios";
+import { useState } from "react";
+
+function ProductForm({fetchData}) {
+    const [product,setProduct]=useState({name:'',price:'',category:''});
+    const handleSubmit =async(e)=> {
+        e.preventDefault();
+        const id = Math.floor(Math.random()*1000) + "";
+        product.id=id;
+        const resp = await axios.post('http://localhost:3000/products/',product);
+        if(resp.status===201) {
+            alert('Product added succesfully');
+            fetchData();
+            setProduct({name:'',price:'',category:''});
+        } else {
+            alert('Error while adding product');
+        }
+    }
+    return ( 
+        <div>
+            <form onSubmit={handleSubmit}>
+                <h3>Add new Product</h3>
+                <div className="form-group mb-3">
+                <label htmlFor="name">Product Name:</label>
+                <input type="text" placeholder="i.e; lenovo" className="form-control" id="name" onChange={(e)=>setProduct({...product,name:e.target.value})} value={product.name} />
+                </div>
+                <div className="form-group mb-3">
+                <label htmlFor="price">Product Price:</label>
+                <input type="text" placeholder="i.e; 39999" className="form-control" id="price" onChange={(e)=>setProduct({...product,price:e.target.value})} value={product.price}/>
+                </div>
+                <div className="form-group mb-3">
+                <label htmlFor="category">Product Catgory:</label>
+                <input type="text" placeholder="i.e; electronics" className="form-control" id="category" onChange={(e)=>setProduct({...product,category:e.target.value})} value={product.category}/>
+                </div>
+                <div className="mb-3">
+                    <button className="btn btn-primary w-50">Add Product</button>
+                </div>
+            </form>
+        </div>
+     );
+}
+
+export default ProductForm;
