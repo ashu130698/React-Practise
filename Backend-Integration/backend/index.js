@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const connectDB = require('./connect');
 
 const app = express();
@@ -7,6 +8,7 @@ app.use(express.json());
 connectDB();
 
 app.use('/api/auth', require('./routes/userRoute'));
-app.listen(5000, () => 
+
+app.listen(5000, () =>
     console.log("server started"));
     

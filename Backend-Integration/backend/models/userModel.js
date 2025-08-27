@@ -1,13 +1,16 @@
-const { timeStamp } = require("console");
+
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema; ({
+const userSchema = mongoose.Schema ({
     name: { type: String, required: true },
     email: { type: String, required: true },
     username: { type: String, required: true },
     password: { type: String, required: true },
-}, { timeStamp: true });
+}, { timeStamps: true });
 
-const UserModel = mongoose.model('Users', userSchema);
+// create model
 
-module.exports=UserModel
+const UserModel = mongoose.model('User', userSchema);
+
+//exports
+module.exports = UserModel;
