@@ -33,7 +33,7 @@ function Product() {
                 <p className="card-text">
                   {product.description}
                 </p>
-                <Link to={`/detail/${product.id}`} className="btn btn-primary">
+                <Link to={`/detail/${product.id}`} target={"_blank" } className="btn btn-primary">
                   View
                 </Link>
               </div>
