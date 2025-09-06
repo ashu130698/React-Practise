@@ -4,18 +4,18 @@ import { useParams } from "react-router-dom";
 
 function ProductDetail() {
   const { id } = useParams();
-    const [product, setProduct] = useState(null);
-    const fetchData = async () => {
-      try {
-        const resp = await axios.get(`https://dummyjson.com/products/${id}`);
-        setProduct(resp.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    useEffect(() => {
-      fetchData();
-    }, []);
+  const [product, setProduct] = useState(null);
+  const fetchData = async () => {
+    try {
+      const resp = await axios.get(`https://dummyjson.com/products/${id}`);
+      setProduct(resp.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, [])
     return (
       <div>
         {product ? (
