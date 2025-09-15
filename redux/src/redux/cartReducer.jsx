@@ -3,11 +3,17 @@ const initialState = {
 }
 
 function CartReducer(state=initialState, action) {
-    return ( 
-        <div>
+    switch (action.type) {
+        case 'ADD ITEM':
+            return { ...state, items: [...state.item, action.payload] };
+        case 'REMOVE ITEM':
+            console.log(action.payload);
 
-        </div>
-     );
+            return { ...state, item: state.items.filter(item => item.product.id != action.payload) };
+        default:
+            return state;
+            
+    }
 }
 
 export default CartReducer;
