@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-function header() {
+
+function Header() {
   const cart = useSelector(state => state.cartReducer.items);
     return (
-      <>
+      <div className="mt-3">
         <ul className="nav">
           <li className="nav-item">
             <Link className="nav-link" to="counter">
@@ -17,16 +18,16 @@ function header() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link type="button" className="btn btn-primary positive-relative" to='cart'>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <Link type="button" className="btn btn-primary positive-relative" to='cart'> Cart
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {cart.length}
-                <span class="visually-hidden">unread messages</span>
+                <span className="visually-hidden">unread messages</span>
               </span>
             </Link>
           </li>
         </ul>
-      </>
+      </div>
     );
 }
 
-export default header;
+export default Header;

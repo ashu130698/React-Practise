@@ -11,7 +11,7 @@ function Counter() {
     <div>
       <h3>count : {count}</h3>
       <button onClick={increment}>+</button>
-      <button onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
+      <button onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
     </div>
   );
 }
