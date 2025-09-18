@@ -1,0 +1,20 @@
+-------------Redux------------
+
+Helping us to manage global state by using some set of tools and abstractions which actually which actually streaming our regular redux.
+
+
+1. configureStore : 
+
+With this method we can directly create store and setup redux dev tools and other extensions.
+
+2. createSlice() :
+
+It is akey function which allow us to create state, reducers and actions at same place and actions can adjust automatically based on our written reducers.
+
+3. Auto-generate-actions :
+
+Redux toolkit genertate actions automatically when you write methods inside your reducers.
+
+4. createAsyncThunk :
+
+this functions handles asynchronous logic (fetching data from api)
