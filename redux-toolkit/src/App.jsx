@@ -1,9 +1,14 @@
-function App() {
-  return ( 
-    <div className="">
+import { BrowserRouter } from "react-router-dom";
+import Counter from "./component/Counter";
 
-    </div>
-   );
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="">
+        <Counter />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
