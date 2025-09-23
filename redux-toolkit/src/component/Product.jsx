@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 
-function Product() {
+function Products() {
     const [products, setProducts] = useState([]);
     const dispatch = useDispatch();
     const fetchData = async () => {
         try {
-            const resp = await axios.get('https://dummy.json.com/products');
+            const resp = await axios.get('https://dummyjson.com/products');
             setProducts(resp.data.products);
         } catch (error) {
              console.log(error);
@@ -44,11 +44,12 @@ function Product() {
                   </button>
                 </div>
               </div>
-            </div>
+                      </div>
+                    ))
           }
         </div>
       </div>
     );
 }
 
-export default Product;
+export default Products;
